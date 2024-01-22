@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        //ЗАДАЧА1
+            //ЗАДАЧА1
         byte b = 100;
         short sh = 300;
         int i = 40000;
