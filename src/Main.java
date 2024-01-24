@@ -4,7 +4,7 @@ public class Main {
         byte b = 100;
         short sh = 300;
         int i = 40000;
-        long l = 100000000l;
+        long l = 100000000L;
         float f = 100.112f;
         double d = 102.9999;
         System.out.println("Значение переменной b с типом byte равно " + b);
@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Значение переменной b с типом double равно " + d);
         //ЗАДАЧА2
         float fl = 27.12f;
-        long k = 987678965549l;
+        long k = 987678965549L;
         double digits = 2.786;
         short ssshhhh = 569;
         int n = -159;
@@ -32,10 +32,11 @@ public class Main {
         System.out.println("На каждого ученика рассчитано "+ listovNaUchenika + " листов бумаги");
         ///ЗАДАЧА4
         System.out.println("...");
-        byte bottlesEveryTwoMinutes = 16;
-        byte bottlesRepMinute = 16/2;
+        int bottlesEveryTwoMinutes = 16;
+        int bottlesRepMinute = bottlesEveryTwoMinutes/2;
         int bForTwentyMinutes = bottlesRepMinute*20;
-        int bForDay = bottlesRepMinute*1440;
+        int minutesInADay = 24*60;
+        int bForDay = bottlesRepMinute*minutesInADay;
         int bForThreeDays = bForDay*3;
         long bForMonth = bForThreeDays*10;
         System.out.println("За 20 минут машина произвела " + bForTwentyMinutes + " штук бутылок.");
@@ -59,8 +60,8 @@ public class Main {
         byte ammountOfMilk = 2;
         byte ammounyOfIce = 2;
         byte ammountOfEgg = 4;
-        int totalMassInGrams = massBanana*ammountOfBanana+massEggs*ammountOfEgg+massMilk*ammountOfMilk+massEggs*ammountOfEgg;
-        double totalMassInKilo = totalMassInGrams/1000;
+        double totalMassInGrams = massBanana*ammountOfBanana+massEggs*ammountOfEgg+massMilk*ammountOfMilk+ammounyOfIce*massIce+massEggs*ammountOfEgg;
+        double totalMassInKilo = totalMassInGrams/1000.0;
         System.out.println("Масса в гарммах равна " + totalMassInGrams);
         System.out.println("Масса в килограммах равна " + totalMassInKilo);
         //ЗАДАЧА7
@@ -69,16 +70,21 @@ public class Main {
         short minReduce = 250;
         short maxReduce = 500;
         short massInGrams = 7*1000;
+        short maxDays = (short)(massInGrams/minReduce);
+        short minDays = (short)(massInGrams/maxReduce);
+        double averageAmmountOfTime = (maxDays+minDays)/2;
         System.out.println("Если терять в день по 250 грамм, то потребуется " + massInGrams/minReduce + " дней");
         System.out.println("Если терять в день по 500 грамм, то потребуется " + massInGrams/maxReduce + " дней");
+        System.out.println("В среднем, чтобы добиться результата похудения, может потребоваться " + averageAmmountOfTime + " дней");
         //ЗАДАЧА8
         System.out.println("...");
-        int zpMasha = 67760;
-        int zpDenis = 83690;
-        int zpKristina = 76230;
-        int povishMasha = zpMasha/10;
-        int povishDenis = zpDenis/10;
-        int povishKristina = zpKristina/10;
+        double zpMasha = 67760;
+        double zpDenis = 83690;
+        double zpKristina = 76230;
+        double procent = 0.1;
+        double povishMasha = zpMasha*procent;
+        double povishDenis = zpDenis*procent;
+        double povishKristina = zpKristina*procent;
         zpMasha += povishMasha;
         zpDenis += povishDenis;
         zpKristina += povishKristina;
