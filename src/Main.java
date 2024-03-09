@@ -10,7 +10,6 @@ public class Main {
     //}
     //return arr;
     //}
-
     public static void tusk1() {
         //ЗАДАЧА1
         System.out.println("ЗАДАЧА1");
